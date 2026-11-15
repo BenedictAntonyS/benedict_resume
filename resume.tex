@@ -1,0 +1,149 @@
+%-------------------------------------------------------------------------------
+% Benedict Antony S - 1-Page Comprehensive Professional Resume
+% Optimized for single-page fit, clean typography, ATS parsing, and Overleaf / pdflatex
+%-------------------------------------------------------------------------------
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{geometry}
+\usepackage{charter}
+\usepackage{xcolor}
+
+% Color definitions (Professional dark slate theme)
+\definecolor{primary}{RGB}{18, 24, 38}
+\definecolor{accent}{RGB}{28, 78, 128}
+\definecolor{subtext}{RGB}{85, 95, 110}
+
+% Page margins tailored strictly for an elegant, dense 1-page fit
+\geometry{
+  top=0.45in,
+  bottom=0.45in,
+  left=0.52in,
+  right=0.52in
+}
+
+% Hyperlink styling
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent
+}
+
+% Section title formatting with subtle bottom rule
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large\bfseries\color{primary}
+}{}{0em}{}[\color{accent}\titlerule \vspace{-4.5pt}]
+
+% Custom list styling for tight, consistent vertical spacing
+\setlist[itemize]{
+  leftmargin=1.15em,
+  labelsep=0.4em,
+  topsep=1.5pt,
+  partopsep=0pt,
+  parsep=1pt,
+  itemsep=1.5pt
+}
+
+\begin{document}
+
+%-------------------------------------------------------------------------------
+% HEADING / CONTACT
+%-------------------------------------------------------------------------------
+\begin{center}
+  {\Huge \textbf{\color{primary} Benedict Antony S}} \\ \vspace{2pt}
+  {\small \textbf{AI Researcher \& Problem Solver} \ $\cdot$ \ Bengaluru, India} \\ \vspace{2pt}
+  {\footnotesize
+    \href{mailto:benedict.s2023@rvu.edu.in}{benedict.s2023@rvu.edu.in} \ $|$ \ 
+    \href{https://linkedin.com/in/benedict-antony-s-4172242a7}{linkedin.com/in/benedict-antony-s} \ $|$ \ 
+    \href{https://github.com/BenedictAntonyS}{github.com/BenedictAntonyS} \ $|$ \ 
+    \href{https://benedictresume.vercel.app}{Portfolio: benedictresume.vercel.app}
+  }
+\end{center}
+\vspace{-10pt}
+
+%-------------------------------------------------------------------------------
+% EDUCATION
+%-------------------------------------------------------------------------------
+\section{Education}
+\noindent
+\textbf{RV University}, Bengaluru, India \hfill \textbf{Aug 2023 -- Present} \\
+\textit{B.Tech in Computer Science and Engineering (AI/ML Hons)} $\cdot$ \textit{Minor in Bioinformatics} \hfill \textbf{CGPA: 8.8 / 10.0} \\
+\vspace{1.5pt}
+\textbf{St. Anthony's PU College}, Bengaluru, India \hfill \textbf{Aug 2021 -- Mar 2023} \\
+\textit{Pre-University Course (PCMB -- Physics, Chemistry, Mathematics, Biology)} \hfill \textbf{Score: 95.5\%}
+\vspace{-3pt}
+
+%-------------------------------------------------------------------------------
+% RESEARCH & PUBLICATIONS
+%-------------------------------------------------------------------------------
+\section{Research Publication}
+\noindent
+\textbf{IEEE Xplore} $\cdot$ \textit{Research Paper Author} \hfill \textbf{Published} \\
+\textbf{``Spatiotemporal Forecasting of Cellular Growth Dynamics for Sequential Time-Lapse Microscopy''}
+\begin{itemize}
+  \item Engineered a novel \textbf{ConvLSTM-GAN} deep learning framework to forecast future differentiated growth states and confluence dynamics of Neuroblastoma cancer cells from LiveCell sequential time-lapse microscopy.
+  \item Modeled temporal dependencies across frame sequences, generating high-fidelity pixel-wise probabilistic growth maps of high-potential mitotic regions with verified biological realism and structural preservation.
+\end{itemize}
+\vspace{-3pt}
+
+%-------------------------------------------------------------------------------
+% FEATURED PROJECTS
+%-------------------------------------------------------------------------------
+\section{Featured Projects}
+
+\noindent
+\textbf{Vidhi-RAG (formerly NyayaRAG) -- Explainable Legal Bail Prediction System} \hfill \textbf{Python, Neo4j, ChromaDB, PyTorch}
+\begin{itemize}
+  \item Built a hybrid AI bail decision support engine achieving \textbf{88.75\% accuracy} and \textbf{86.86\% F1 score} evaluated on the benchmark of 1,200 Indian court judgments across 78 judicial benches.
+  \item Integrated Random Forest with \textbf{SHAP} explainability, a \textbf{Neo4j Knowledge Graph} modeling statutory sections (IPC, CrPC, NDPS) and precedence risk, alongside vector semantic retrieval via \textbf{FAISS / ChromaDB}.
+  \item Developed a lightweight ReAct reasoning agent on a 4-bit quantized \textbf{TinyLlama-1.1B} model to synthesize case facts with cited statutory sections, outputting audit-ready legal rationales.
+\end{itemize}
+
+\vspace{2pt}
+\noindent
+\textbf{Policy Guard -- Automated Compliance Verification Engine} \hfill \textbf{FastAPI, PostgreSQL, Docker, Groq, SBERT}
+\begin{itemize}
+  \item Built an enterprise compliance verification platform automating gap audits against \textbf{GDPR, HIPAA, and PCI DSS} using a dual-engine architecture combining regex heuristics with fine-tuned \textbf{PyTorch / SBERT} clause tagging.
+  \item Implemented a production RAG pipeline with Groq LLaMA models for contextual policy querying, automated clause rewriting, and interactive compliance chat; containerized with Docker Compose and backed by 29 CI/CD unit tests.
+\end{itemize}
+
+\vspace{2pt}
+\noindent
+\textbf{BioTelemetry IoT -- Plant Health \& Environmental Telemetry Pipeline} \hfill \textbf{Microcontrollers, Python, Scikit-learn}
+\begin{itemize}
+  \item Designed an edge-to-cloud IoT environmental monitoring array streaming ambient $CO_2$, humidity, and temperature data; trained machine learning models to detect micro-climate anomalies and crop vegetative stress indicators.
+\end{itemize}
+\vspace{-3pt}
+
+%-------------------------------------------------------------------------------
+% TECHNICAL SKILLS
+%-------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=1.15em]
+  \item \textbf{Languages \& Core:} Python, C, C++, SQL (PostgreSQL), Bash/Linux, Git \& GitHub.
+  \item \textbf{AI / ML \& Deep Learning:} PyTorch, TensorFlow, Scikit-learn, ConvLSTM, GANs, OpenCV, Hugging Face Transformers.
+  \item \textbf{Agentic AI \& RAG:} LangGraph, RAG Pipelines, ChromaDB, FAISS, Neo4j Graph DB, Knowledge Graphs, LLaMA / TinyLlama.
+  \item \textbf{Backend \& Cloud/DevOps:} FastAPI, REST APIs, Docker, Docker Compose, GitHub Actions (CI/CD), Telemetry \& IoT.
+\end{itemize}
+\vspace{-3pt}
+
+%-------------------------------------------------------------------------------
+% HONORS & CERTIFICATIONS
+%-------------------------------------------------------------------------------
+\section{Honors, Awards \& Certifications}
+\begin{itemize}
+  \item \textbf{1st Place Winner -- Dataquest}: Dell Technologies \& RV University AI Hackathon (April 2026).
+  \item \textbf{NPTEL Elite Certification}: \textit{Introduction to Graph Systems and Algorithms} -- \textbf{Score: 85\%} (Top Performer).
+  \item \textbf{NPTEL Certification}: \textit{Affective Computing} -- \textbf{Score: 75\%}.
+  \item \textbf{Simplilearn Professional Certifications}: \textit{Transformer Models \& BERT}, \textit{Open Source Models with Hugging Face}, and \textit{Introduction to LangGraph (Agentic Workflows)}.
+  \item \textbf{RUDRA -- Data Science Club}: Active Core Technical Team Member at RV University.
+\end{itemize}
+
+\end{document}
+
